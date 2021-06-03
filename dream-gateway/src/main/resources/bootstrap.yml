@@ -1,0 +1,25 @@
+server:
+  port: 8760
+
+spring:
+  application:
+    name: dream-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 启用自动根据服务ID生成路由
+          lower-case-service-id: true # 设置路由的路径为小写的服务ID
+      routes:
+        - id: dream-auth
+          uri: /dream-auth
+          predicates:
+            - Path=/dream-auth/**
+          filters:
+            - StripPrefix=1 # 移除前缀 dream-auth
+        - id: dream-admin
+          uri: /dream-admin
+          predicates:
+            - Path=/dream-admin/**
+          filters:
+            - StripPrefix=1

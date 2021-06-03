@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.black.dream_gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class DreamGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(DreamGatewayApplication.class, args);
     }
 
 }
